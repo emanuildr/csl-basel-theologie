@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Basel Theologie Simplified</title>
+    <id>http://www.zotero.org/styles/basel-theologie-simplified</id>
+    <link href="http://www.zotero.org/styles/basel-theologie-simplified" rel="self"/>
+    <author>
+      <name>ChatGPT Basel</name>
+      <email>kontakt@theolbasel.ch</email>
+    </author>
+    <category citation-format="note"/>
+    <category field="theology"/>
+    <updated>2025-03-25T00:00:00+00:00</updated>
+    <summary>Basler theologischer Zitationsstil – einfache, Mendeley-kompatible Version</summary>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/"/>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" name-as-sort-order="all" delimiter=", " and="text"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <choose>
+      <if type="book">
+        <text variable="title" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="publisher">
+    <group delimiter=", ">
+      <text variable="publisher"/>
+      <text variable="publisher-place"/>
+      <text macro="issued"/>
+    </group>
+  </macro>
+
+  <citation>
+    <layout suffix=".">
+      <text macro="author"/>
+      <text macro="title" prefix=", "/>
+      <text macro="publisher" prefix=", "/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout suffix=".">
+      <text macro="author"/>
+      <text macro="title" prefix=", "/>
+      <text macro="publisher" prefix=", "/>
+    </layout>
+  </bibliography>
+</style>
