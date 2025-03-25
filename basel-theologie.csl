@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Basel Theologie (Fußnotenstil)</title>
+    <id>http://www.zotero.org/styles/basel-theologie</id>
+    <link href="http://www.zotero.org/styles/chicago-fullnote-bibliography" rel="self"/>
+    <author>
+      <name>Adapted by ChatGPT for Theologische Fakultät Basel</name>
+    </author>
+    <category citation-format="note"/>
+    <updated>2025-03-25T12:00:00+00:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" name-as-sort-order="all" sort-separator=", " delimiter=", " and="text"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <choose>
+      <if type="book">
+        <text variable="title" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="publisher">
+    <group delimiter=", ">
+      <text variable="publisher"/>
+      <text variable="publisher-place"/>
+      <text variable="issued"/>
+    </group>
+  </macro>
+
+  <citation>
+    <layout delimiter="; " suffix=".">
+      <text macro="author"/>
+      <text macro="title" prefix=", "/>
+      <text macro="publisher" prefix=", "/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout suffix=".">
+      <text macro="author"/>
+      <text macro="title" prefix=", "/>
+      <text macro="publisher" prefix=", "/>
+    </layout>
+  </bibliography>
+</style>
